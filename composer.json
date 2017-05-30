@@ -1,0 +1,25 @@
+{
+  "license": "MIT",
+  "type": "package",
+  "name": "alex-oliveira/ao-contacts",
+  "homepage": "https://github.com/alex-oliveira/ao-contacts",
+  "description": "Resources for Contacts with Laravel.",
+  "keywords": ["alex-oliveira", "laravel", "contacts"],
+  "authors": [
+    {
+      "name": "Alex Oliveira",
+      "homepage": "https://github.com/alex-oliveira",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AoContacts\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.5.9",
+    "laravel/framework": "5.*",
+    "alex-oliveira/ao-scrud": "dev-master"
+  }
+}
