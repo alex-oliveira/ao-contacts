@@ -18,13 +18,9 @@ class CreateAoContactsTables extends Migration
             $table->softDeletes();
         });
 
-        Schema::create('ao_contacts_phone_types', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name', 50);
-            $table->timestamps();
-        });
+        // PHONES //
 
-        Schema::create('ao_contacts_email_types', function (Blueprint $table) {
+        Schema::create('ao_contacts_phone_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 50);
             $table->timestamps();
@@ -42,6 +38,14 @@ class CreateAoContactsTables extends Migration
             $table->softDeletes();
         });
 
+        // EMAILS //
+
+        Schema::create('ao_contacts_email_types', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name', 50);
+            $table->timestamps();
+        });
+
         Schema::create('ao_contacts_emails', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('contact_id')->unsigned();
@@ -57,9 +61,11 @@ class CreateAoContactsTables extends Migration
     public function down()
     {
         Schema::drop('ao_contacts_emails');
-        Schema::drop('ao_contacts_phones');
         Schema::drop('ao_contacts_email_types');
+
+        Schema::drop('ao_contacts_phones');
         Schema::drop('ao_contacts_phone_types');
+
         Schema::drop('ao_contacts_contacts');
     }
 

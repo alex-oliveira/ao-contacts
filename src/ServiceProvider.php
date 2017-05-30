@@ -2,9 +2,9 @@
 
 namespace AoContacts;
 
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Illuminate\Support\ServiceProvider as LaraServiceProvider;
 
-class ServiceProvider extends BaseServiceProvider
+class ServiceProvider extends LaraServiceProvider
 {
 
     public function boot()

@@ -37,4 +37,5 @@ return [
 ### 4) Publish migrations
 ````
 $ php artisan vendor:publish
+$ composer dump
 ````
